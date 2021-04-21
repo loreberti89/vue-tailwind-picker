@@ -199,6 +199,7 @@
                       v-for="date in currentPicker"
                       :key="`${date.$D}${date.$M}${date.$y}-current`"
                       class="w-1/7 group flex justify-center items-center my-2px"
+                      @click="changePicker(date)"
                     >
                       <div
                         class="relative overflow-hidden"
@@ -235,7 +236,7 @@
                                 ? `${theme.picker.selected.background} shadow-xs`
                                 : '',
                             ]"
-                            @click="changePicker(date)"
+                            
                           ></div>
                           <div
                             class="flex justify-center items-center"
